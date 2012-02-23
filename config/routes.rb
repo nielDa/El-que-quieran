@@ -1,5 +1,7 @@
 Poyo::Application.routes.draw do
   root :to => "pages#index"
+  match '/places' => 'places#main'
+  match '/places/new' => 'places#new', :as => :new_place
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -18,7 +18,7 @@
    %td= place.opening_schedule
    %td= place.close_schedule
 
-   %td= Link_to "Edit", edit_place_path(place.id)
-   %td= Link_to "Eliminar", delete_place_patch(place.id)
+   %td= link_to "Edit", edit_place_path(place.id)
+   %td= link_to "Eliminar", delete_place_patch(place.id)
 
 =button_to "New", new_place_path

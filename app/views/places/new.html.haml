@@ -1,0 +1,17 @@
+= form_for @place, :url => "create" do |f|
+ = f.label :Address
+ = f.text_field :address
+ %br
+ = f.label :City
+ = f.text_field :city
+ %br
+ = f.label :Opening schedule
+ = f.text_field :opening_schedule
+ %br
+ = f.label :Close schedule
+ = f.text_field :close_schedule
+ %br
+ = f.label :Description
+ = f.text_field :description
+ %br
+ = f.submit "create"
