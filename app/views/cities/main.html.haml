@@ -1,0 +1,26 @@
+%table
+ %tbody
+  %tr
+   %th ID
+   %th Name
+   %th Population
+   %th State
+   %th Country
+   %th Zip
+   %th Description
+   %th Update
+   %th Delete
+ - @cities.each do |citie|
+  %tr
+   %td= citie.id
+   %td= citie.name
+   %td= citie.population
+   %td= citie.state
+   %td= citie.country
+   %td= citie.zip
+   %td= citie.description
+
+   %td= Link_to "Edit", edit_citie_path(citie.id)
+   %td= Link_to "Eliminar", delete_citie_patch(citie.id)
+
+=button_to "New", new_citie_path

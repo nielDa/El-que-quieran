@@ -1,0 +1,24 @@
+%table
+ %tbody
+  %tr
+   %th ID
+   %th Address
+   %th city
+   %th Description
+   %th opening schedule
+   %th close schedule
+   %th Update
+   %th Delete
+ - @places.each do |place|
+  %tr
+   %td= place.id
+   %td= place.address
+   %td= place.city
+   %td= place.description
+   %td= place.opening_schedule
+   %td= place.close_schedule
+
+   %td= Link_to "Edit", edit_place_path(place.id)
+   %td= Link_to "Eliminar", delete_place_patch(place.id)
+
+=button_to "New", new_place_path
